@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Outfit:wght@100..900&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', Arial, sans-serif; 
+            background-color: #1F1F1F; 
+            color: white;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border-bottom: 1px solid #14FFEC; 
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 40px;
+            color: #14FFEC; 
+            font-family: 'League Spartan', sans-serif; 
+        }
+        
+        .settings-section {
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #323232; 
+            text-align: left;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .settings-section h2 {
+            margin-top: 0;
+            color: #14FFEC; 
+        }
+        
+        .settings-section label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #14FFEC; 
+        }
+        
+        .settings-section input[type="text"], 
+        .settings-section input[type="password"], 
+        .settings-section select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #323232; 
+            color: white;
+        }
+        
+        .settings-section input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #14FFEC; 
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #1F1F1F; 
+            cursor: pointer;
+        }
+        
+        .settings-section input[type="submit"]:hover {
+            background-color: #0D7377; 
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #1ce6ea; 
+            background-color: #242424; 
+            border: 2px solid #1ce6ea; 
+            border-radius: 50px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #1ce6ea; 
+            color: #242424; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Settings</h1>
+        </div>
+        <div class="settings-section">
+            <h2>Account Settings</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            
+            <label for="language">Language</label>
+            <select id="language" name="language">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+            </select>
+            
+            <input type="submit" value="Save Changes">
+        </div>
+        <div class="settings-section">
+            <h2>Privacy Settings</h2>
+            <label for="email-notifications">Email Notifications</label>
+            <select id="email-notifications" name="email-notifications">
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+            
+            <label for="profile-visibility">Profile Visibility</label>
+            <select id="profile-visibility" name="profile-visibility">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+            
+            <input type="submit" value="Save Changes">
+        </div>
+        <div class="container">
+            <button id="myButton" class="button">Back</button>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("myButton").onclick = function() {
+        window.location.href="http://localhost:5173/";
+    };
+</script>
+</html>

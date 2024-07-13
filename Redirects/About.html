@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Outfit:wght@100..900&display=swap');
+        
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #242424; /* Slightly lighter than Dark Gray */
+            font-family: 'Outfit', sans-serif;
+            color: white;
+        }
+        
+        #heading {
+            background: -webkit-linear-gradient(16deg, #1ce6ea, #0db5b9); /* Slightly lighter than Bright Cyan to Teal */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 56px;
+            font-weight: 500;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        #main {
+            font-size: 20px;
+            text-align: justify;
+            padding: 0px 10%;
+            max-height: 70vh;
+            overflow-y: scroll;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #1ce6ea; /* Slightly lighter than Bright Cyan */
+            background-color: #242424; /* Slightly lighter than Dark Gray */
+            border: 2px solid #1ce6ea; /* Slightly lighter than Bright Cyan */
+            border-radius: 50px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #1ce6ea; /* Slightly lighter than Bright Cyan */
+            color: #242424; /* Slightly lighter than Dark Gray */
+        }
+        
+        @media (max-width: 600px) {
+            #heading {
+                font-size: 36px;
+                margin: 10px 0;
+            }
+            #main {
+                padding: 0px 5%;
+                font-size: 18px;
+            }
+            .button {
+                margin-top: 0px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <p>About</p>
+    </div>
+    <p id="main">Welcome to Cato.ai! We're thrilled to introduce you to our revolutionary chatbot powered by React and Vite. Combining the versatility of React with the lightning-fast build times of Vite, we've created a seamless and responsive platform that delivers an unparalleled user experience.<br><br>
+        With React's component-based architecture and Vite's optimized development server, Cato.ai is not only powerful but also incredibly efficient. Our team has meticulously crafted every aspect of the chatbot to ensure smooth performance and effortless navigation.<br><br>
+        Whether you're interacting with Cato.ai for work, play, or simply to explore its capabilities, you'll be amazed by its speed, flexibility, and reliability. Join us as we redefine the possibilities of conversational AI with React and Vite at the helm. Welcome to Cato.ai—where innovation meets excellence.</p>
+    <div class="container">
+        <button id="myButton" class="button">Back</button>
+    </div>
+    <script>
+        document.getElementById("myButton").onclick = function() {
+            window.location.href="http://localhost:5173/";
+        };
+    </script>
+</body>
+</html>
